@@ -7,7 +7,7 @@ function _user_host() {
   fi
 
   if [[ -n $me ]]; then
-    echo "%{$fg[cyan]%}$me%{$reset_color%}:"
+    echo "%{$fg[yellow]%}$me%{$reset_color%}:%{$fg[cyan]%}%c%{$reset_color%}"
   fi
 }
 
@@ -16,9 +16,9 @@ ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
 # Format for git prompt status indicators
-ZSH_THEME_GIT_PROMPT_CLEAN=" "
+ZSH_THEME_GIT_PROMPT_CLEAN="h "
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[magenta]%}? "
-ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[yellow]%}+ "
+ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}+ "
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%}△ "
 ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}✖ "
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%}» "
@@ -29,7 +29,7 @@ ZSH_THEME_GIT_PROMPT_DIVERGED="%{$fg[cyan]%}⇕ "
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✗%{$reset_color%} "
 
 # Format for git_prompt_long_sha() and git_prompt_short_sha()
-ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%{$fg[yellow]%}"
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%{$fg[white]%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%} "
 
 # Format for time since commit message
@@ -84,7 +84,5 @@ local _git_prompt_info="%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}"
 local _return_status="%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
 
 # The prompt
-PROMPT='
-┌─[$(_user_host)${_git_prompt_info}$(git_prompt_short_sha)$(git_prompt_status)$(_git_time_since_commit)${_return_status}]
+PROMPT='┌─[$(_user_host) $(git_prompt_info)$(git_prompt_status)$(git_prompt_short_sha)$(_git_time_since_commit)${_return_status}]
 └─> '
-
