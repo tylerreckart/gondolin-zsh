@@ -16,9 +16,9 @@ ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
 # Format for git prompt status indicators
-ZSH_THEME_GIT_PROMPT_CLEAN="h "
+ZSH_THEME_GIT_PROMPT_CLEAN=" "
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[magenta]%}? "
-ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}+ "
+ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[blue]%}+ "
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%}△ "
 ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}✖ "
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%}» "
