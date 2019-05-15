@@ -7,7 +7,7 @@ function _user_host() {
   fi
 
   if [[ -n $me ]]; then
-    echo "%{$fg[yellow]%}$me%{$reset_color%}:%{$fg[cyan]%}%c%{$reset_color%}"
+    echo "%{$fg[cyan]%}$me%{$reset_color%}:%{$fg[cyan]%}%c%{$reset_color%}"
   fi
 }
 
