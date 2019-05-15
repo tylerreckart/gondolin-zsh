@@ -12,7 +12,7 @@ function _user_host() {
 }
 
 # Format for current branch indicator
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[green]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
 # Format for git prompt status indicators
@@ -80,9 +80,8 @@ function _git_time_since_commit() {
   fi
 }
 
-local _git_prompt_info="%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}"
-local _return_status="%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
+local _return_status="%{$fg[red]%}%(?..⍉)%{$reset_color%}"
 
 # The prompt
-PROMPT='┌─[$(_user_host) $(git_prompt_info)$(git_prompt_status)$(git_prompt_short_sha)$(_git_time_since_commit)${_return_status}]
+PROMPT='┌─[$(_user_host)$(git_prompt_info)$(git_prompt_status)$(git_prompt_short_sha)$(_git_time_since_commit)${_return_status}]
 └─> '
