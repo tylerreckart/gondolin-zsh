@@ -83,5 +83,5 @@ function _git_time_since_commit() {
 local _return_status="%{$fg[red]%}%(?..⍉)%{$reset_color%}"
 
 # The prompt
-PROMPT='┌─[$(_user_host)$(git_prompt_info)$(git_prompt_status)$(git_prompt_short_sha)$(_git_time_since_commit)${_return_status}]
-└─> '
+PROMPT='$(_user_host)$(git_prompt_info)$(git_prompt_status)$(git_prompt_short_sha)$(_git_time_since_commit)${_return_status}
+→ '
